@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_background"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp">
+<!--
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/coronavirus"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-50dp"/>
+-->
+        <ImageView
+            android:id="@+id/one"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cheart"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="-60dp"/>
+        <!--
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toStartOf="@id/one"
+            android:layout_marginEnd="60dp"
+            android:src="@drawable/cheart"
+            android:layout_alignParentTop= "true"
+            android:layout_marginTop="50dp"
+            />
+-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/app_name"
+                android:textSize="20sp"
+
+                android:fontFamily="@font/uncial_antiqua"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="45dp"
+                />
+
+            <TextView
+                android:id="@+id/dist_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Districts"
+                android:textSize="30sp"
+                android:textAllCaps="true"
+                android:drawablePadding="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="45dp"
+                android:fontFamily="@font/blowbrush"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="15dp"
+                            android:background="#FFEB3B"
+                            android:layout_height="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="Confirm"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="15dp"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:layout_marginStart="5dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="15dp"
+                            android:background="#0522C3"
+                            android:layout_height="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="Active"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="15dp"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:layout_marginStart="5dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="15dp"
+                            android:background="#00FF0A"
+                            android:layout_height="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="Recovered"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="15dp"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:layout_marginStart="5dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="15dp"
+                            android:background="#FF1100"
+                            android:layout_height="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="Death"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="15dp"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:layout_marginStart="5dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <org.eazegraph.lib.charts.PieChart
+                    android:id="@+id/activity_each_district_piechart"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:padding="4dp"
+                    app:egDrawValueInPie="true"
+                    app:egLegendHeight="0dp"
+                    app:egValueTextSize="0dp"
+                    app:egInnerPaddingColor="@color/colorPrimary"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:columnCount="2"
+            android:layout_marginTop="30dp"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/card_size"
+                android:layout_columnWeight="1"
+                android:padding="12dp"
+                android:layout_gravity="center"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="18dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="15dp"
+                            android:background="#FFEB3B"
+                            android:layout_height="15dp"/>
+
+                        <TextView
+                            android:id="@+id/activity_each_district_confirmed_title_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Confirm"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="15dp"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:layout_marginStart="10dp"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/activity_each_district_confirmed_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="1234657522"
+                        android:layout_marginTop="7dp"
+                        android:textSize="@dimen/title_size1"
+                        android:layout_marginEnd="15dp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/activity_each_district_confirmed_new_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="( + 50)"
+                        android:layout_marginTop="7dp"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="15dp"
+                        android:textAllCaps="true"
+                        app:drawableStartCompat="@drawable/arrow_drop_up_24"
+                        android:fontFamily="@font/gabriela_regular"
+
+
+                        />
+
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/card_size"
+                android:layout_columnWeight="1"
+                android:padding="12dp"
+                android:layout_gravity="center"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="18dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="15dp"
+                            android:background="#0522C3"
+                            android:layout_height="15dp"/>
+
+                        <TextView
+                            android:id="@+id/activity_each_district_active_title_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Active"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="15dp"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:layout_marginStart="10dp"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/activity_each_district_active_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="1234657522"
+                        android:layout_marginTop="7dp"
+                        android:textSize="@dimen/title_size1"
+                        android:layout_marginEnd="15dp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/activity_each_district_active_new_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_marginTop="7dp"
+                        android:textSize="@dimen/title_size1"
+                        android:layout_marginEnd="15dp"
+                        android:textAllCaps="true"
+                        />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/card_size"
+                android:layout_columnWeight="1"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="18dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="15dp"
+                            android:background="#00FF0A"
+                            android:layout_height="15dp"/>
+
+                        <TextView
+                            android:id="@+id/activity_each_district_recovered_title_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Recovered"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="15dp"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:layout_marginStart="10dp"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/activity_each_district_recovered_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="1234657522"
+                        android:layout_marginTop="7dp"
+                        android:textSize="@dimen/title_size1"
+                        android:layout_marginEnd="15dp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/activity_each_district_recovered_new_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="( + 50)"
+                        app:drawableStartCompat="@drawable/arrow_drop_up_24"
+                        android:fontFamily="@font/gabriela_regular"
+                        android:layout_marginTop="7dp"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="15dp"
+                        android:textAllCaps="true"
+                        />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/card_size"
+                android:layout_columnWeight="1"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="18dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_height="30dp">
+
+                        <View
+                            android:layout_width="15dp"
+                            android:background="#FF1100"
+                            android:layout_height="15dp"/>
+
+                        <TextView
+                            android:id="@+id/activity_each_district_death_title_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:text="Deaths"
+                            android:layout_marginTop="2dp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/activity_each_district_death_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="1234657522"
+                        android:layout_marginTop="7dp"
+                        android:textSize="@dimen/title_size1"
+                        android:layout_marginEnd="15dp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/activity_each_district_death_new_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="( + 50)"
+                        android:layout_marginTop="7dp"
+                        app:drawableStartCompat="@drawable/arrow_drop_up_24"
+                        android:fontFamily="@font/gabriela_regular"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="15dp"
+                        android:textAllCaps="true"
+                        />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/home_btn"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:padding="12dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="18dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/activity_each_state_lastupdate_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/orange"
+                        android:text="Home"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/title_size1"
+                        android:layout_marginEnd="15dp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_marginTop="7dp"
+                        android:textSize="@dimen/title_size1"
+                        android:layout_marginEnd="15dp"
+                        android:textAllCaps="true"
+                        />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

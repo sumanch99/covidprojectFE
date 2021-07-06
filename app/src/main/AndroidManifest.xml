@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.projectfinalyear.covapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/cheart"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/cheart"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CoTracker">
+        <activity android:name=".Fragments.doctor_registration"></activity>
+        <activity android:name=".Fragments.prediction" />
+        <activity android:name=".NewsActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CountryActivity" />
+        <activity android:name=".StateWiseDataActivity" />
+        <activity android:name=".EachStateDataActivity" />
+        <activity android:name=".EachDistrictDataActivity" />
+        <activity android:name=".DistrictWiseDataActivity" />
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

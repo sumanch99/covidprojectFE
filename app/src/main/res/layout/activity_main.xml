@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
+        android:tag="menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:fontFamily="@font/uncial_antiqua"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:text="CovApp"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginEnd="170dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/cheart"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Home"
+                android:gravity="center_vertical"
+                android:layout_marginTop="35dp"
+                android:layout_marginHorizontal="30dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/home"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:fontFamily="@font/amita_regular"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_moreInfo"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_baseline_info_24"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:fontFamily="@font/amita_regular"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="More Info (WHO)"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_CoWin"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/add_circle_outline_24"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:fontFamily="@font/amita_regular"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CoWin"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_aarogya"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_baseline_favorite_24"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:fontFamily="@font/amita_regular"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aarogya Setu App"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_MoreApps"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/apps_24"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:fontFamily="@font/amita_regular"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prediction"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_doctor_registration"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_baseline_add_box_24"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:fontFamily="@font/amita_regular"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor Registration"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+            <!--
+                        <LinearLayout
+                            android:id="@+id/ll_privacyPolicy"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginHorizontal="24dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_baseline_privacy_tip_24"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:fontFamily="@font/amita_regular"
+                                android:textSize="16sp"
+                                android:layout_marginHorizontal="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Privacy Policy"
+                                android:textColor="@color/white"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_share"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginHorizontal="24dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/share"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:fontFamily="@font/amita_regular"
+                                android:textSize="16sp"
+                                android:layout_marginHorizontal="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Share"
+                                android:textColor="@color/white"/>
+
+                        </LinearLayout>
+            -->
+            <LinearLayout
+                android:id="@+id/ll_exit"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_baseline_exit_to_app_24"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:fontFamily="@font/amita_regular"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Exit"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </nl.psdcompany.duonavigationdrawer.views.DuoMenuView>
+
+    <androidx.cardview.widget.CardView
+
+        android:tag="content"
+        android:elevation="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/background"
+                />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/frame" />
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

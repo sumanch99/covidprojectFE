@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "621734463165",
+    "project_id": "corona-tracker-43f27",
+    "storage_bucket": "corona-tracker-43f27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621734463165:android:c5af886cb5139ba70659d4",
+        "android_client_info": {
+          "package_name": "com.projectfinalyear.covapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621734463165-p3nfnommiivlglp6iqhed5osivpnid7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAy5BkCjac2iBDcmhKf0gpblhCeLrnoz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621734463165-p3nfnommiivlglp6iqhed5osivpnid7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
